@@ -1,0 +1,10 @@
+Work in progress, more or less stable.
+
+A simple pastebin.
+
+Upload to server (preferably the root of a domain or a sub-domain)
+make a folder next to the public html for files to get stored in
+
+the script will error if not setup properly.
+
+Readme might get better ;)
