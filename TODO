@@ -1,2 +1,4 @@
 *Make it so you can see the code unwrapped instead of wrapped.
 *Fix HTML bug where everything is over-filtered
+*If export.php is unavailable, do not show export function
+*Show link to view pastebined text un-wrapped
