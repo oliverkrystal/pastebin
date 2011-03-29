@@ -33,6 +33,7 @@
 	//THESE WILL ALWAYS RETURN A NULL STRING THAT IS NOT NULL AND ISSET WILL DETECT IT AS SET AND IS_NULL WILL DETECT IT AS SET!!!!
 	$post = filter_var($_REQUEST["post"], FILTER_SANITIZE_NUMBER_INT);
 	$post_data = filter_var($_REQUEST["data"], FILTER_SANITIZE_SPECIAL_CHARS);
+	$post_wrap = filter_var($_GET["wrap"], FILTER_SANITIZE_NUMBER_INT);
 	//UNFILTERED CONTENT!
 	$DIRTY_post = $_REQUEST["post"];
 	$DIRTY_post_data = $_REQUEST["data"];
@@ -82,6 +83,21 @@
 		<meta charset="utf-8">
 		<link rel="stylesheet" type = "text/css" href="/stylesheet.css"/>
 		<style type="text/css">
+			<?php
+				if ($post_wrap == '1'){ echo "
+			pre {
+				test
+				/*border-style: dashed;*/
+				border-width: .5px;
+				padding: 5px 10px 5px 10px;
+				/*width: 90%;*/
+				margin-left: auto;
+				margin-right: auto;
+				display: block;
+				margin: 6px;
+				/*white-space:pre-wrap;*/
+			}";
+				} else { echo "
 			pre {
 				border-style: dashed;
 				border-width: .5px;
@@ -92,7 +108,9 @@
 				display: block;
 				margin: 6px;
 				white-space:pre-wrap;
-			}
+			}";
+					} ?>
+/* we love php funkiness*/
 			#paste {
 				width: 90%;
 				margin-left: auto;
