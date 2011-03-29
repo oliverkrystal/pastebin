@@ -1,13 +1,14 @@
 <?php
+	include 'functions.php';
 //Check to make sure that the post directory is available
 	$post_storage = getcwd()."/../posts/";
-	//make sure system is configured correctly:
+//make sure system is configured correctly:
 	if (!is_dir($post_storage) ) {
 		die ("You fail!  Make a storage directory stupid");
 	}
 //Create a random post number and check to insure that it is not currently in use
 //Make a better function, preferably once based on the date
-	$ran_number = rand();
+	$ran_number = getPasteString();
 	while (file_exists($post_storage.$post_number)) {
 			$post_number++;
 	}
@@ -65,7 +66,7 @@
 		<meta charset="utf-8">
 		<link rel="stylesheet" type = "text/css" href="/stylesheet.css"/>
 		<style type="text/css">
-			pre { 
+			pre {
 				border-style: dashed;
 				border-width: .5px;
 				padding: 5px 10px 5px 10px;
@@ -73,11 +74,11 @@
 				margin-left: auto;
 				margin-right: auto;
 				display: block;
-				margin: 6px;			
+				margin: 6px;
 				white-space:pre-wrap;
 			}
 			#paste {
-				width: 90%;				
+				width: 90%;
 				margin-left: auto;
 				margin-right: auto;
 				text-align: left;
