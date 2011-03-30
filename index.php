@@ -172,4 +172,7 @@
 		</div>
 
 	</body>
+	<footer>
+		The source is available on <a href="https://github.com/oliverkrystal/pastebin">github</a>.
+	</footer>
 </html>
