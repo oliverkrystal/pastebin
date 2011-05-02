@@ -15,7 +15,7 @@
  *      Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston,
  *      MA 02110-1301, USA.
  */
-	include 'functions.php';
+include 'functions.php';
 //Check to make sure that the post directory is available
 	$post_storage = getcwd()."/../posts/";
 //make sure system is configured correctly:
@@ -23,15 +23,15 @@
 		die ("You fail!  Make a storage directory stupid");
 	}
 //Create a random post number and check to insure that it is not currently in use
-//Make a better function, preferably once based on the date
-	$ran_number = getPasteString();
+	$post_number = getPasteString();
+	//$post_number = checkIfChild($post_number);
 	while (file_exists($post_storage.$post_number)) {
 			$post_number++;
 	}
 
 //Read parameters.
 	//THESE WILL ALWAYS RETURN A NULL STRING THAT IS NOT NULL AND ISSET WILL DETECT IT AS SET AND IS_NULL WILL DETECT IT AS SET!!!!
-	$post = filter_var($_REQUEST["post"], FILTER_SANITIZE_NUMBER_INT);
+	$post = filter_var($_REQUEST["post"], FILTER_SANITIZE_STRING);
 	$post_data = filter_var($_REQUEST["data"], FILTER_SANITIZE_SPECIAL_CHARS);
 	$post_wrap = filter_var($_GET["wrap"], FILTER_SANITIZE_NUMBER_INT);
 	//UNFILTERED CONTENT!
