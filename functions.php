@@ -16,9 +16,17 @@
  *      MA 02110-1301, USA.
  */
 
-        function getPasteString(){
-                $time = microtime();
-                $string = explode(" ", $time);
-                return $string[1] . (rand()%3);
-        }
+	function getPasteString(){
+		$time = microtime();
+		$string = explode(" ", $time);
+		return $string[1] . (rand()%2);
+	}
+
+	function checkIfChild($string){
+			$string = explode("C" $string);
+			if is_null($string[1])
+				return 0;
+			else
+				return 1
+		}
 ?>
