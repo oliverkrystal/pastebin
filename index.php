@@ -25,7 +25,8 @@ include 'functions.php';
 //Create a random post number and check to insure that it is not currently in use
 	$post_number = getPasteString();
 	//$post_number = checkIfChild($post_number);
-	while (file_exists($post_storage.$post_number)) {
+	if (file_exists($post_storage.$post_number)) {
+		if (!checkIfChild($post_number))
 			$post_number++;
 	}
 
@@ -40,7 +41,7 @@ include 'functions.php';
 
 //Check to see if $post is null and swap if needed
 	if (is_null($DIRTY_post)){
-		$post_number = $ran_number;
+		$post_number = $post;
 	} else {
 		$post_number = $post;
 		//header('Location: index.php?post='.$post_number);
