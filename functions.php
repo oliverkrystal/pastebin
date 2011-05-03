@@ -23,10 +23,23 @@
 	}
 
 	function checkIfChild($string){
-			$string = explode("C" $string);
-			if is_null($string[1])
-				return 0;
-			else
-				return 1
+		$string = explode("C", $string)
+		if (is_null($string[1])
+			return false;
+		else
+			return true;
+	}
+
+/*
+	function makeChild($string){
+		$string2=explode("C", $string);
+		$i=1;
+		if (!is_null($string2[$i]))
+				i++;
+		$string=
+		if (file_exists($post_storage.$string)) {
+			$post_number=makeChild($post_number);
+
 		}
+*/
 ?>
