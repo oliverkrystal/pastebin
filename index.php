@@ -164,7 +164,7 @@ include 'functions.php';
 		<div id="newPaste">
 			<h2><?php if (is_null($DIRTY_post)){ echo "Make new paste:"; } else { echo "Edit this Paste"; } ?></h2>
 			<form action="index.php" method="post">
-				Post Number (Randomly Generated): <input type="readonly" name="post" value="<?php echo $post_number; ?>" />
+				Post Number (Randomly Generated): <input disabled="disabled" type="readonly" name="post" value="<?php echo $post_number; ?>" />
 				<br/>
 				<!-- Post Content:-->
 				<textarea rows="20" cols="100" name="data" ><?php if (file_exists ($post_storage.$post_number)){ echo $body;} ?></textarea>
