@@ -13,4 +13,4 @@ Because that's what it is, a pastebin and I've given up on trying to make good n
 * Upload contents of this repo (you really only need index.php and export.php) to ~/pastebin/public_html and the install is complete.
 
 ##Anything else
-Nope.  I'm still working on this thing, so check back when the fancy strikes.  And, thanks for using!
+This is a dead project - no support, zip, zilch nada.  I've got other projects I need to work on.
