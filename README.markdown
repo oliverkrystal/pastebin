@@ -1,23 +1,16 @@
-===Pastebin===
+#Pastebin
 
-=Why the name?
+##Why the lame name?
 Because that's what it is, a pastebin and I've given up on trying to make good names for my projects.  Its a pastebin.  That's what it does.  That's what I call it.
 
-=Whatever dude, how to use?
-The best way to use it is to read this readme.
+##Installation
+* Make the following folder tree
 
-First, make a folder
-mkdir ~/users/~pastebin/public_html
-You will be pointing the root of the domain or subdomain to public_html.  I won't provide specifics because it varies.   It is important that there is no way to access the sub folders of ~/users/~pastebin via http.  Why?
+	`~/pastebin/  
+	~/pastebin/public_html  
+	~/pastebin/posts  `
 
-Next step.  Setup another folder in the pastebin folder, called posts.
-mkdir ~/users/~pastebin/posts
-And that's why.
+* Upload contents of this repo (you really only need index.php and export.php) to ~/pastebin/public_html and the install is complete.
 
-Upload contents of this repo (you really only need index.php and export.php) and you're done.
-
-=What?
-Yup, that's right, no SQL.  I don't know how resistant this thing is to XSS and other attacks but it doens't have to worry about SQL injection flaws.
-
-=Anything else
-Nope.  I'm still working on this thing, so check back often :)  And, thanks for using!
+##Anything else
+Nope.  I'm still working on this thing, so check back when the fancy strikes.  And, thanks for using!
