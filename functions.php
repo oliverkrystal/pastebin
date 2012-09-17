@@ -23,7 +23,7 @@
 	}
 
 	function checkIfChild($string){
-		$string = explode("C", $string)
+		$string = explode("C", $string);
 		if (is_null($string[1])
 			return false;
 		else
